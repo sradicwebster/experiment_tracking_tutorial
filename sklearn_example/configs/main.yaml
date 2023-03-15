@@ -1,0 +1,11 @@
+defaults:
+  - _self_
+  - model: linear
+
+test_frac: 0.3
+dataset:
+  _target_: sklearn.datasets.fetch_california_housing
+scaling:
+  _target_: sklearn.preprocessing.MinMaxScaler
+metric:
+  _target_: sklearn.metrics.mean_squared_error

@@ -1,0 +1,8 @@
+defaults:
+  - _self_
+  - method: euler
+
+a: 1
+x0: 1
+T: 2
+h: 0.1

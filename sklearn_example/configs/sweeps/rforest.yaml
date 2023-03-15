@@ -1,0 +1,23 @@
+program: train_sklearn.py
+project: experiment_tracking_tutorial
+method: grid
+name: random_forest_hyperparametets
+metric:
+  goal: minimize
+  name: sklearn/test_error
+
+parameters:
+
+  model.n_estimators:
+    values: [50, 100, 200]
+
+  model.max_features:
+    min: 4
+    max: 10
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args_no_hyphens}
+  - model=rforest
