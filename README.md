@@ -39,7 +39,7 @@ The more accurate Runge–Kutta method is:
 
 $$ x_{t+1} = x_t + \frac{h}{6} (k_1 + 2 k_2 + 2 k_3 + k_4)$$
 
-where: $ k_1 = f(t, x_t),\ k_2 = f(\frac{t + h}{2}, x_t + h \frac{k_1}{2}),\ k_3 = f(\frac{t + h}{2}, x_t + h \frac{k_2}{2}),\ k_4 = f(\frac{t + h}{2}, x_t + h\ k_3) $
+where: $k_1 = f(t, x_t)$, $k_2 = f(\frac{t + h}{2}, x_t + h \frac{k_1}{2})$,  $k_3 = f(\frac{t + h}{2}, x_t + h \frac{k_2}{2})$ and $k_4 = f(\frac{t + h}{2}, x_t + h\ k_3)$
 
 These functions have been implemented in `solve_ode/ode_functions.py`.
 
