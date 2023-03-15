@@ -1,0 +1,1 @@
+_target_: sklearn.datasets.fetch_california_housing

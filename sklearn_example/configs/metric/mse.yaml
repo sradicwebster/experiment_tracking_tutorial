@@ -1,0 +1,1 @@
+_target_: sklearn.metrics.mean_squared_error

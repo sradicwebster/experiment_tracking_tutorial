@@ -1,7 +1,7 @@
-program: train_sklearn.py
+program: train.py
 project: experiment_tracking_tutorial
-method: grid
-name: random_forest_hyperparametets
+method: bayes
+name: random_forest_hyperparameters
 metric:
   goal: minimize
   name: sklearn/test_error

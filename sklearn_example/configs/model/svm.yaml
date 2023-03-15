@@ -1,4 +1,3 @@
-_target_: sklearn.svm.SVR
+_target_: sklearn.svm.SVC
 kernel: "rbf"
 C: 1
-epsilon: 0.1
