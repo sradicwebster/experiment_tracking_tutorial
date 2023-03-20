@@ -1,10 +1,13 @@
 # A Python tutorial on W&B and Hydra to configure, visualise and evaluate experiments
 
-Firstly, create a conda environment and install the required packages:
+Firstly, create a conda environment, clone the repo and install the required packages:
 
 ```zsh
 conda create -n experiment_tracking_tutorial
 conda activate experiment_tracking_tutorial
+conda install pip
+git clone git@github.com:sradicwebster/experiment_tracking_tutorial.git
+cd experiment_tracking_tutorial
 pip install -r requirements.txt
 ```
 
