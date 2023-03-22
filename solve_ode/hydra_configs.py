@@ -16,8 +16,9 @@ def run(cfg: DictConfig) -> None:
         x[i + 1] = hydra.utils.call(cfg.method, t[i], x[i], ode)
 
     fig, ax = plt.subplots()
-    ax.scatter(t, x)
-    ax.plot(t, sol(t))
+    ax.scatter(t, x, label=cfg.method._target_.split('.')[-1])
+    ax.plot(t, sol(t), label='exact')
+    ax.legend()
     ax.set_xlim(0, cfg.T)
     plt.show()
 

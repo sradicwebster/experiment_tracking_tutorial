@@ -3,7 +3,7 @@ from ode_functions import *
 
 
 def run():
-    a = 1
+    a = 2
     h = 0.1
     T = 2
     x0 = 1
@@ -17,8 +17,9 @@ def run():
         x[i + 1] = euler(t[i], x[i], ode, h)
 
     fig, ax = plt.subplots()
-    ax.scatter(t, x)
-    ax.plot(t, sol(t))
+    ax.scatter(t, x, label='euler')
+    ax.plot(t, sol(t), label='exact')
+    ax.legend()
     ax.set_xlim(0, T)
     plt.show()
 

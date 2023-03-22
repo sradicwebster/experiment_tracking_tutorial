@@ -18,8 +18,9 @@ def run(a, x0, method, T, h):
             raise "method must be euler or rk4"
 
     fig, ax = plt.subplots()
-    ax.scatter(t, x)
-    ax.plot(t, sol(t))
+    ax.scatter(t, x, label=f'{method}')
+    ax.plot(t, sol(t), label='exact')
+    ax.legend()
     ax.set_xlim(0, T)
     plt.show()
 

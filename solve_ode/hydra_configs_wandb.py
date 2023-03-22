@@ -18,6 +18,9 @@ def run(cfg: DictConfig) -> None:
         wandb.log({"solve_ode/x": x, "solve_ode/t": t[i]})
         time.sleep(0)
 
+    sol = exact_sol(cfg.a, cfg.x0)
+    wandb.log({"solve_ode/error": np.abs(x - sol(cfg.T))})
+
 
 if __name__ == "__main__":
     run()

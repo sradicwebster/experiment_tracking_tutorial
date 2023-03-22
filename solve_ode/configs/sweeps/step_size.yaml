@@ -1,0 +1,13 @@
+program: hydra_configs_wandb.py
+project: experiment_tracking_tutorial
+method: grid
+name: step_size
+parameters:
+  h:
+    values: [0.01, 0.02, 0.025, 0.05, 0.1]
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args_no_hyphens}
